@@ -29,7 +29,8 @@ end
     description: Faker::Lorem.sentence(word_count: rand(5..20)),
     email: Faker::Internet.email,
     age: Faker::Number.between(from: 13, to: 99),
-    city: City.all.sample
+    city: City.all.sample,
+    password: "hello"
     )
 end
 

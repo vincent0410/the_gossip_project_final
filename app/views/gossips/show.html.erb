@@ -1,0 +1,36 @@
+<br></br>
+<br></br>
+
+<html>
+  <body>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Content</th>
+      <th scope="col">Author</th>
+      <th scope="col">"Author's city"</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%= @gossip.title %></th>
+
+    <td><%= @gossip.content %></td>
+    <td><%=@user.first_name%> <%=@user.last_name%></td>
+    <td><%= @city.name %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "Ville de l'auteur", city_show_path(@city.id) , class: 'btn btn-secondary bg-info' %>
+
+
+<%= link_to 'Auteur', user_show_path(@user.id) , class: 'btn btn-secondary bg-info' %>
+
+
+
+
+    
+  </body>
+</html>

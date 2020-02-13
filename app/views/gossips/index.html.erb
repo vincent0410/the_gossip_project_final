@@ -1,0 +1,23 @@
+<h3>Derniers ragôts</h3>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="card-deck">
+  <div class="col-sm-6">
+      <% @all_gossips.each do |potin| %>
+        <div class="card border-info text-white bg-info mb-3">
+          <div class="card-header bg-light text-warning">
+            <%= link_to 'Auteur:', user_show_path(potin.user.id), style: "text-decoration: none" %>
+            <%= potin.user.first_name %> <%= potin.user.last_name %>
+          </div>
+          <div class="card-body">
+            Titre du ragôt :
+            <h5 class="card-title"><%= potin.title %></h5>
+            <%= link_to 'Détail', gossips_show_path(potin.id), class: 'btn btn-secondary bg-info' %>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
